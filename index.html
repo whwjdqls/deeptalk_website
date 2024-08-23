@@ -284,9 +284,13 @@ Speech-driven 3D facial animation has garnered lots of attention thanks to its b
     <div class="photo-section">
       <h2 style="text-align: center;">Architecture</h2>
       <img src="static/DEEPTalk_main.png" style="width: 800px; height: auto;">
+      <p style="text-align: center; margin-top: 10px;">
+       (a) $E_{audio}$ and $E_{exp}$ are trained to predict mean and variance for a joint audio-facial emotion embedding space, DEE. (b) We train TH-VQVAE with separate codebooks, $\mathcal{Z}^b$ and $\mathcal{Z}^t$, for low and high-frequency motions, respectively. (c) DEEPTalk first extracts face features, predict top and bottom codebook indices, and use frozen TH-VQVAE decoders to decode the quantized motion features. To ensure emotion alignment between input audio and the predicted facial expressions, we introduce an emotional consistency loss $L_{emo}$ by utilizing DEE.
+      </p>
     </div>
   </div>
 </section>
+
 
     <!--/ Abstract. -->
 
