@@ -39,6 +39,8 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <!-- MathJax for LaTeX -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 </head>
 <body>
 <!-- 
@@ -279,18 +281,17 @@ Speech-driven 3D facial animation has garnered lots of attention thanks to its b
     <!--/ Abstract. -->
 
     <!--/ Abstract. -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="photo-section">
-      <h2 style="text-align: center;">Architecture</h2>
-      <img src="static/DEEPTalk_main.png" style="width: 800px; height: auto;">
-      <p style="text-align: center; margin-top: 10px;">
-       (a) $E_{audio}$ and $E_{exp}$ are trained to predict mean and variance for a joint audio-facial emotion embedding space, DEE. (b) We train TH-VQVAE with separate codebooks, $\mathcal{Z}^b$ and $\mathcal{Z}^t$, for low and high-frequency motions, respectively. (c) DEEPTalk first extracts face features, predict top and bottom codebook indices, and use frozen TH-VQVAE decoders to decode the quantized motion features. To ensure emotion alignment between input audio and the predicted facial expressions, we introduce an emotional consistency loss $L_{emo}$ by utilizing DEE.
-      </p>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="photo-section" style="text-align: center;">
+        <h2>Architecture</h2>
+        <img src="static/DEEPTalk_main.png" style="width: 800px; height: auto; display: block; margin: 0 auto;">
+        <p style="margin-top: 10px;">
+          (a) \( E_{\text{audio}} \) and \( E_{\text{exp}} \) are trained to predict mean and variance for a joint audio-facial emotion embedding space, DEE. (b) We train TH-VQVAE with separate codebooks, \( \mathcal{Z}^b \) and \( \mathcal{Z}^t \), for low and high-frequency motions, respectively. (c) DEEPTalk first extracts face features, predicts top and bottom codebook indices, and uses frozen TH-VQVAE decoders to decode the quantized motion features. To ensure emotion alignment between input audio and the predicted facial expressions, we introduce an emotional consistency loss \( L_{\text{emo}} \) by utilizing DEE.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
     <!--/ Abstract. -->
 
